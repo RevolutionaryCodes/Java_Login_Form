@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kryptech </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="call_of_duty.ico" type="image/x-icon">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                height: 100vh;
+            }
+            .form-div{
+                background-color: rgba(103, 106, 110, 0.4);
+                margin: 6rem auto;
+                width: 27rem;
+                height: 30rem;
+                border-radius: 7px;
+                box-shadow: 0 0 20px #333333;
+                z-index: 2;
+                position: absolute;
+                 top: 9%;
+                 left: 36%;
+                border: 2px solid  #f1f1f1;
+            }
+            .img-blur{
+                filter:blur(9px);
+                -webkit-filter: blur(8px);
+                height: 100%;
+                background-image: url("background.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            h1{
+                text-align: center;
+                font-size: 3rem;
+                font-family: Monaco;
+                color: white;
+                padding: 1rem;
+            }
+            .indicator{
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                color: white;
+                font-family:  Verdana, Geneva, Tahoma, sans-serif;
+                display: block;
+                margin-left: 3rem;
+            }
+            .user{
+                border: none;
+                margin-left: 3rem;
+                background-color: rgba(150, 106, 110, 0.4);
+                width: 20rem;
+                height: 2rem;
+                display: block;
+                margin-top: 1rem;
+                border-bottom: 3px solid white;
+                color: white;
+                padding: 1rem;
+                font-size: 1rem;
+                font-family: 'Times New Roman', Times, serif;
+               border-radius: 0px 80px 0px 0px;
+            }
+            .user:focus{
+                outline: none;
+            }
+            .submition1:hover{
+                animation-name: userkey;
+                animation-duration: 4s;
+                animation-iteration-count:infinite;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+            }
+            .submition2:hover{
+                animation-name: userkey;
+                animation-duration:4s;
+                animation-iteration-count:infinite;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+            }
+            @keyframes userkey{
+                0%{
+                    background-color: rgba(150, 106, 110, 0.4);
+                }
+                30%{
+                    background-color:rgb(230, 166, 124);
+                }
+                60%{
+                    background-color:rgb(240, 103, 12);
+                }
+                80%{
+                    background-color:rgb(230, 166, 124);
+                }
+                100%{
+                    background-color: rgba(150, 106, 110, 0.4);
+                }
+            }
+            .submition1{
+                font-size: 1.4rem;
+                margin-top: 3rem;
+                color: white;
+                background-color: rgba(150, 106, 110, 0.4);
+                width: 9rem;
+                border-radius: 100px ;
+                border:none;
+                margin-left: 1rem;
+                padding: 0.5rem;
+            }
+            .submition2{
+                font-size: 1.4rem;
+                margin-top: 3rem;
+                color: white;
+                background-color: rgba(150, 106, 110, 0.4);
+                width: 9rem;
+                border-radius: 100px ;
+                padding: 0.5rem;
+                border:none;
+                margin-left: 6rem;
+                right: 0;
+            }
+            @media only screen and (max-width:768px){
+                .form-div{
+                    left: 10%;
+                    width: 20rem;
+                    top: 2%;
+                }
+                .user{
+                    width: 15rem;
+                }
+                .submition1{
+                    width: 5.5rem;
+                    margin-left:2.5rem; 
+                }
+                .submition2{
+                    width: 5.5rem;
+                     margin-left:4.5rem;
+                }
+            }
+            @media only screen and (min-width:770px) and (max-width:1000px){
+                 .form-div{
+                    left: 5%;
+                    width: 20rem;
+                    top: 2%;
+                    overflow: hidden;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="img-blur"></div>
+        <div class="form-div">
+            <h1> Sign-in </h1> 
+            <form method="post" action="Database">
+                <label><span class="indicator">UserName</span>
+                    <input type="text" class="user" name="User-Name" required/>
+                </label>
+                <label><span class="indicator">Password</span>
+                    <input class="user" type="password" name="Password" required/>
+                </label>
+                <input type="submit" value="Login" name="enter" class="submition1"/>
+                <input type="submit" value="Sign-in" name="enter" class="submition2"/>
+            </form>
+        </div>>
+    </body> 
+</html>
